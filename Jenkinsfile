@@ -5,20 +5,27 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Compiling the .cpp file...'
-                sh 'g++ -o myProgram test.cpp'
+                sh "g++ -o PES1UG21CS540-1 myFile.cpp"
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running the .cpp file...'
-                sh './myProgram'
+                sh "./PES1UG21CS540-1"
+            }
+        }
+
+        stage('Build PES1UG21CS540-1 Project') {
+            steps {
+                echo 'Triggering PES1UG21CS540-1 project build...'
+                build job: 'PES1UG21CS540-1'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deployment step...'
+                echo 'Deploying the program...'
             }
         }
     }
