@@ -5,14 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Compiling the .cpp file...'
-                sh "g++ -o PES1UG21CS540-1 myFile.cpp"
+                sh "g++ -o test test.cpp"
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running the .cpp file...'
-                sh "./PES1UG21CS540-1"
+                sh "./test"
             }
         }
 
