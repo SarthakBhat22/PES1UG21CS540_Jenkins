@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running the .cpp file...'
-                sh "./test"
+                sh "./nonexistent-executable"
             }
         }
 
