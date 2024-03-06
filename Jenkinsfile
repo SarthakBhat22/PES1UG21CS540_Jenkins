@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running the .cpp file...'
-                sh "./nonexistent-executable"
+                sh "./test"
             }
         }
 
@@ -26,6 +26,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the program...'
+                sh 'this_command_does_not_exist'
             }
         }
     }
